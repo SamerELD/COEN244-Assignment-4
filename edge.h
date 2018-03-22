@@ -14,20 +14,20 @@
 
 class Edge
 {
-
+    
 public:
-    Edge();							//default constructor
-    Edge(int, Vertex&, Vertex&);	//constructor
-    Edge(Edge&);					//copy constructor
+    Edge();                            //default constructor
+    Edge(int, Vertex&, Vertex&);    //constructor
+    Edge(Edge&);                    //copy constructor
     ~Edge();
-
+    
     void setWeight(int);
     int getWeight();
-
+    
     void setVertices(Vertex&, Vertex&);
     Vertex getStartingVertex();
     Vertex getEndingVertex();
-
+    
 private:
     int Weight;
     Vertex StartingVertex;

@@ -1,27 +1,28 @@
 //
-//  graph.h
+//  UndirectedGraph.h
 //  Problem 1
 //
-//  Created by Osama AlKhatatbeh on 3/18/18.
+//  Created by Osama AlKhatatbeh on 3/22/18.
 //  Copyright © 2018 Osama AlKhatatbeh. All rights reserved.
 //
 
-#ifndef graph_h
-#define graph_h
+#ifndef UndirectedGraph_h
+#define UndirectedGraph_h
 
 #include <iostream>
+#include "graph.h"
 #include "vertex.h"
 #include "edge.h"
 #include <vector>
 using namespace std;
 
-class Graph {
+class UndirectedGraph : public Graph{
     
 public:
-    Graph();
-    Graph(vector <Vertex>&, vector <Edge>&);
-    Graph(Graph &);
-    virtual ~Graph();
+    UndirectedGraph();
+    UndirectedGraph(vector <Vertex>&, vector <Edge>&);
+    UndirectedGraph(UndirectedGraph &);
+    virtual ~UndirectedGraph();
     
     virtual bool addVertex(Vertex& v)=0;            //adds one vertex; returns bool if added successfully.
     virtual bool removeVertex(Vertex& v) = 0;        //removes a vertex; the edges that have connection with this vertex need to //be removed;
@@ -44,9 +45,6 @@ public:
 private:
     vector <Vertex> VertexVector;
     vector <Edge> EdgesVector;
-    
 };
 
-#endif /* graph_h */
-
-
+#endif /* UndirectedGraph_h */

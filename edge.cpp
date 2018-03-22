@@ -24,9 +24,9 @@ Edge::Edge(int w, Vertex &start, Vertex &end)
 
 Edge::Edge( Edge & E)
 {
-	Weight = E.Weight;
-	StartingVertex = E.StartingVertex;
-	EndingVertex = E.EndingVertex;
+    Weight = E.Weight;
+    StartingVertex = E.StartingVertex;
+    EndingVertex = E.EndingVertex;
 }
 
 
@@ -37,23 +37,23 @@ void Edge::setWeight(int w)
 
 int Edge::getWeight()
 {
-	return Weight;
+    return Weight;
 }
 
 void Edge::setVertices(Vertex& Start, Vertex& End)
 {
-	StartingVertex = Start;
-	EndingVertex = End;
+    StartingVertex = Start;
+    EndingVertex = End;
 }
 
 Vertex Edge::getStartingVertex()
 {
-	return StartingVertex;
+    return StartingVertex;
 }
 
 Vertex Edge::getEndingVertex()
 {
-	return EndingVertex;
+    return EndingVertex;
 }
 
 Edge::~Edge()

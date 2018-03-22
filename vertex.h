@@ -13,20 +13,20 @@
 
 class Vertex
 {
-
+    
 public:
-    Vertex();				//default constructor
-    Vertex(int,int);		//constructor
-    Vertex( Vertex&);		//copy constructor
+    Vertex();                //default constructor
+    Vertex(int,int);        //constructor
+    Vertex( Vertex&);        //copy constructor
     void setID(int);
     void setValue(int);
     int getID();
     int getValue();
     ~Vertex();
-
+    
 private:
     int ID;
     int VALUE;
-
+    
 };
 #endif /* vertex_h */

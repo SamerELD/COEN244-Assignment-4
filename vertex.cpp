@@ -23,8 +23,8 @@ Vertex::Vertex(int id,int value)
 
 Vertex::Vertex(Vertex& V)
 {
-	ID = V.ID;
-	VALUE = V.VALUE;
+    ID = V.ID;
+    VALUE = V.VALUE;
 }
 
 void Vertex::setID(int id)
@@ -49,5 +49,5 @@ int Vertex::getValue()
 
 Vertex::~Vertex()
 {
-        //destructor
+    //destructor
 };
