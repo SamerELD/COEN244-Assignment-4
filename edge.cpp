@@ -12,24 +12,51 @@ using namespace std;
 
 Edge::Edge()
 {
-    weight = 0;
-    startingVertex = nullptr;
-    endingVertex = nullptr;
+    Weight = 0;
 }
 
-Edge::Edge(int w,Vertex &start, Vertex &end)
+Edge::Edge(int w, Vertex &start, Vertex &end)
 {
-    weight = w;
-    startingVertex = &start;
-    endingVertex = &end;
+    Weight = w;
+    StartingVertex = start;
+    EndingVertex = end;
 }
+
+Edge::Edge( Edge & E)
+{
+	Weight = E.Weight;
+	StartingVertex = E.StartingVertex;
+	EndingVertex = E.EndingVertex;
+}
+
 
 void Edge::setWeight(int w)
 {
-    weight = w;
+    Weight = w;
+}
+
+int Edge::getWeight()
+{
+	return Weight;
+}
+
+void Edge::setVertices(Vertex& Start, Vertex& End)
+{
+	StartingVertex = Start;
+	EndingVertex = End;
+}
+
+Vertex Edge::getStartingVertex()
+{
+	return StartingVertex;
+}
+
+Vertex Edge::getEndingVertex()
+{
+	return EndingVertex;
 }
 
 Edge::~Edge()
 {
-    //
+    //destructor
 }
