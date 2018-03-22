@@ -21,6 +21,12 @@ Vertex::Vertex(int id,int value)
     VALUE=value;
 }
 
+Vertex::Vertex(Vertex& V)
+{
+	ID = V.ID;
+	VALUE = V.VALUE;
+}
+
 void Vertex::setID(int id)
 {
     ID=id;
