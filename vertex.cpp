@@ -2,8 +2,8 @@
 //  vertex.cpp
 //  Problem 1
 //
-//  Created by Osama AlKhatatbeh on 3/18/18.
-//  Copyright © 2018 Osama AlKhatatbeh. All rights reserved.
+//  Name: Osama AlKhatatbeh , ID:40023753
+//  Name: Samer El-Dehaibi , ID:40057682
 //
 
 #include "vertex.h"
@@ -21,7 +21,7 @@ Vertex::Vertex(int id,int value)
     VALUE=value;
 }
 
-Vertex::Vertex(Vertex& V)
+Vertex::Vertex(const Vertex& V)
 {
     ID = V.ID;
     VALUE = V.VALUE;
@@ -37,7 +37,7 @@ void Vertex::setValue(int value)
     VALUE=value;
 }
 
-int Vertex::getID()
+int Vertex::getID() 
 {
     return ID;
 }

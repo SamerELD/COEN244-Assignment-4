@@ -2,12 +2,13 @@
 //  edge.cpp
 //  Problem 1
 //
-//  Created by Osama AlKhatatbeh on 3/18/18.
-//  Copyright © 2018 Osama AlKhatatbeh. All rights reserved.
+//  Name: Osama AlKhatatbeh , ID:40023753
+//  Name: Samer El-Dehaibi , ID:40057682
 //
 
 #include "edge.h"
 #include "vertex.h"
+#include <vector>
 using namespace std;
 
 Edge::Edge()
@@ -22,7 +23,7 @@ Edge::Edge(int w, Vertex &start, Vertex &end)
     EndingVertex = end;
 }
 
-Edge::Edge( Edge & E)
+Edge::Edge(const Edge & E)
 {
     Weight = E.Weight;
     StartingVertex = E.StartingVertex;

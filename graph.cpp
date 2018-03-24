@@ -2,8 +2,8 @@
 //  graph.cpp
 //  Problem 1
 //
-//  Created by Osama AlKhatatbeh on 3/18/18.
-//  Copyright © 2018 Osama AlKhatatbeh. All rights reserved.
+//  Name: Osama AlKhatatbeh , ID:40023753
+//  Name: Samer El-Dehaibi , ID:40057682
 //
 
 #include "graph.h"
@@ -13,7 +13,11 @@
 #include <vector>
 using namespace std;
 
-Graph::Graph(){}
+Graph::Graph()
+{
+    VertexVector[0];
+    EdgesVector[0];
+}
 
 
 Graph::Graph(vector <Vertex>& Vertices, vector <Edge>& Edges)
@@ -23,7 +27,7 @@ Graph::Graph(vector <Vertex>& Vertices, vector <Edge>& Edges)
 }
 
 
-Graph::Graph(Graph& G)
+Graph::Graph(const Graph& G)
 {
     VertexVector = G.VertexVector;
     EdgesVector = G.EdgesVector;

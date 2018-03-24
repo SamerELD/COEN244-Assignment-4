@@ -2,8 +2,8 @@
 //  edge.h
 //  Problem 1
 //
-//  Created by Osama AlKhatatbeh on 3/18/18.
-//  Copyright © 2018 Osama AlKhatatbeh. All rights reserved.
+//  Name: Osama AlKhatatbeh , ID:40023753
+//  Name: Samer El-Dehaibi , ID:40057682
 //
 
 #ifndef edge_h
@@ -11,6 +11,8 @@
 
 #include <iostream>
 #include "vertex.h"
+#include <vector>
+
 
 class Edge
 {
@@ -18,7 +20,7 @@ class Edge
 public:
     Edge();                            //default constructor
     Edge(int, Vertex&, Vertex&);    //constructor
-    Edge(Edge&);                    //copy constructor
+    Edge(const Edge&);                    //copy constructor
     ~Edge();
     
     void setWeight(int);
