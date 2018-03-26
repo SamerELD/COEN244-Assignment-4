@@ -121,7 +121,7 @@ bool UndirectedGraph::searchEdge(Edge &e)
 void UndirectedGraph::display(Vertex &v)
 {
     cout<<"The path(s) that contain vertex #"<<v.getID()<<" is..."<<endl;
-
+    
     for(unsigned int i = 0; i < EdgesVector.size(); i++)
     {
         if(EdgesVector[i].getStartingVertex().getID() == v.getID())
@@ -161,7 +161,7 @@ void UndirectedGraph::display(Edge &e)
     {
         if(EdgesVector[i].getWeight() == e.getWeight())
         {
-              cout<<EdgesVector[i].getStartingVertex().getValue()<<"->"<<EdgesVector[i].getEndingVertex().getValue();
+            cout<<EdgesVector[i].getStartingVertex().getValue()<<"->"<<EdgesVector[i].getEndingVertex().getValue();
             
             int a = i;
             int j = 0;
@@ -186,32 +186,38 @@ void UndirectedGraph::display(Edge &e)
     }
 }
 
+void UndirectedGraph::display()
+{
+    cout<<endl;
+    
+    cout<<"The vertices of the graph are...";
+    for(unsigned int i = 0; i < VertexVector.size(); i++)
+    {
+        cout<<VertexVector[i].getValue()<<" ";
+    }
+    
+    cout<<endl<<endl;
+    
+    cout<<"In the form of Weight(Starting Vertex,Ending Vertex)...."<<endl;
+    cout<<"The connections of the graph are..."<<endl;
+    
+    for(unsigned int i = 0; i < EdgesVector.size(); i++)
+    {
+        cout<< EdgesVector[i].getWeight()<<"("<<EdgesVector[i].getStartingVertex().getValue()<<","<<EdgesVector[i].getEndingVertex().getValue()<<")"<<endl;
+    }
+    
+}
 
-
-
-
-
-
-
-
-
-
+string UndirectedGraph::toString()
+{
+    
+}
 
 bool UndirectedGraph::clean()
 {
-    cout<<endl;
+    cout<<endl<<endl;
     
     VertexVector.clear();
     EdgesVector.clear();
     return true;
 }
-
-
-
-
-
-
-
-
-
-

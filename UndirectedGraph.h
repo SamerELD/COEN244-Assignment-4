@@ -36,13 +36,13 @@ public:
     virtual void display(Vertex& v);         // displays the path that contains the vertex.
     virtual void display(Edge& e);        // displays the path that contains the edge.
     
-   // virtual void display() const;                // displays the whole graph with your own defined format
+    virtual void display();                // displays the whole graph with your own defined format
     
-   // virtual string toString () const;            // converts the whole graph to a string such as 1-2-4-5; 1-3-5; each path // is separated by ';'
+    virtual string toString ();            // converts the whole graph to a string such as 1-2-4-5; 1-3-5; each path // is separated by ';'
     
     virtual bool clean();                 //remove all the vertices and edges;
     
-
+    
 };
 
 #endif /* UndirectedGraph_h */

@@ -58,6 +58,9 @@ int main()
     ug.display(V2);
     ug.display(E1);
     
+    ug.display();
+    
+    ug.toString();
     
     ug.clean();
     
