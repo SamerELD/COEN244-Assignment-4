@@ -41,6 +41,16 @@ public:
     
     virtual bool clean() = 0;                     //remove all the vertices and edges;
     
+    //operator overloading
+    
+    bool operator==(Graph&);  //returns true if  both graphs are the same
+    void operator =(Graph&);  //assigns a graph to the other
+    void operator ++();       //increases the weight by 1
+    void operator ++(int);    //increases the weight by 1
+    
+    bool operator >(Graph&);   //returns true if weight of edges in G1>G2
+    friend ostream &operator<<( ostream& output, Graph& G);
+    
 protected:
     vector <Vertex> VertexVector;
     vector <Edge> EdgesVector;

@@ -190,15 +190,16 @@ void UndirectedGraph::display()
 {
     cout<<endl;
     
+    cout<<"In the form of 'Vertex#(ID)'..."<<endl;
     cout<<"The vertices of the graph are...";
     for(unsigned int i = 0; i < VertexVector.size(); i++)
     {
-        cout<<VertexVector[i].getValue()<<" ";
+        cout<<VertexVector[i].getValue()<<"("<<VertexVector[i].getID()<<") ";
     }
     
     cout<<endl<<endl;
     
-    cout<<"In the form of Weight(Starting Vertex,Ending Vertex)...."<<endl;
+    cout<<"In the form of 'Weight(Starting Vertex,Ending Vertex)'..."<<endl;
     cout<<"The connections of the graph are..."<<endl;
     
     for(unsigned int i = 0; i < EdgesVector.size(); i++)
@@ -210,8 +211,12 @@ void UndirectedGraph::display()
 
 string UndirectedGraph::toString()
 {
-    
+    return "";
 }
+
+    
+
+
 
 bool UndirectedGraph::clean()
 {
@@ -221,3 +226,31 @@ bool UndirectedGraph::clean()
     EdgesVector.clear();
     return true;
 }
+
+
+UndirectedGraph &UndirectedGraph::operator+(UndirectedGraph&UG)
+{
+    UndirectedGraph NewUG;
+    
+    for(unsigned int i = 0; i < UG.VertexVector.size(); i++)
+    {
+        VertexVector.push_back(UG.VertexVector[i]);
+    }
+    
+    for(unsigned int j = 0; j < UG.EdgesVector.size(); j++)
+    {
+        EdgesVector.push_back(UG.EdgesVector[j]);
+    }
+    
+    NewUG.VertexVector = VertexVector;
+    NewUG.EdgesVector = EdgesVector;
+    
+    return NewUG;
+}
+
+
+
+
+
+
+

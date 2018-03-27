@@ -42,6 +42,10 @@ public:
     
     virtual bool clean();                 //remove all the vertices and edges;
     
+    UndirectedGraph &operator +(UndirectedGraph&);      //returns a graph that contains all the nodes of G1 and G2, all the edges of G1 and G2;
+    
+
+    
     
 };
 
