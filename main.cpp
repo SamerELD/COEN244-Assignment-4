@@ -11,7 +11,7 @@
 #include "vertex.h"
 #include "edge.h"
 #include "graph.h"
-#include "UndirectedGraph.h"
+#include "DirectedGraph.h"
 using namespace std;
 
 int main()
@@ -38,85 +38,95 @@ int main()
     Edge E7(700, V6, V3);
     Edge E8(800, V7, V8);
     
-    UndirectedGraph ug(Vertices, Edges);
-    UndirectedGraph ug2(Vertices, Edges);
-    UndirectedGraph ug3(Vertices, Edges);
+    DirectedGraph dg(Vertices, Edges);
+    DirectedGraph dg2(Vertices, Edges);
+    DirectedGraph dg3(Vertices, Edges);
     
-    ug.addVertex(V1);
-    ug.addVertex(V2);
-    ug.addVertex(V3);
-    ug.addVertex(V4);
-    ug.addVertex(V5);
-    ug.addVertex(V6);
+    dg.addVertex(V1);
+    dg.addVertex(V2);
+    dg.addVertex(V3);
+    dg.addVertex(V4);
+    dg.addVertex(V5);
+    dg.addVertex(V6);
     
-    ug2.addVertex(V1);
-    ug2.addVertex(V2);
-    ug2.addVertex(V3);
-    ug2.addVertex(V4);
-    ug2.addVertex(V5);
-    ug2.addVertex(V6);
-    ug2.addVertex(V7);
-    ug2.addVertex(V8);
+    dg2.addVertex(V1);
+    dg2.addVertex(V2);
+    dg2.addVertex(V3);
+    dg2.addVertex(V4);
+    dg2.addVertex(V5);
+    dg2.addVertex(V6);
+    dg2.addVertex(V7);
+    dg2.addVertex(V8);
     
-    ug.addEdge(E1);
-    ug.addEdge(E2);
-    ug.addEdge(E3);
-    ug.addEdge(E4);
-    ug.addEdge(E5);
-    ug.addEdge(E6);
-    ug.addEdge(E7);
+    dg.addEdge(E1);
+    dg.addEdge(E2);
+    dg.addEdge(E3);
+    dg.addEdge(E4);
+    dg.addEdge(E5);
+    dg.addEdge(E6);
+    dg.addEdge(E7);
     
-    ug2.addEdge(E1);
-    ug2.addEdge(E2);
-    ug2.addEdge(E3);
-    ug2.addEdge(E4);
-    ug2.addEdge(E5);
-    ug2.addEdge(E6);
-    ug2.addEdge(E7);
-    ug2.addEdge(E8);
+    dg2.addEdge(E1);
+    dg2.addEdge(E2);
+    dg2.addEdge(E3);
+    dg2.addEdge(E4);
+    dg2.addEdge(E5);
+    dg2.addEdge(E6);
+    dg2.addEdge(E7);
+    dg2.addEdge(E8);
     
-    ug.searchVertex(V1);
-    ug.searchEdge(E1);
+    dg.searchVertex(V1);
+    dg.searchEdge(E1);
     
-    ug.display(V2);
-    ug.display(E1);
+    dg.display(V2);
+    dg.display(E1);
     
-    ug.display();
+    dg.display();
     
-    ug.toString();
+    cout<<endl;
+    cout<<dg.toString();
     
     cout<<endl<<endl;
     
-    cout<< (ug == ug2)<<endl;
+    cout<< (dg == dg2)<<endl;
     
     
-    if(ug>ug2){
-        cout<<" ug is heavier"<<endl;
+    if(dg>dg2){
+        cout<<"dg is heavier"<<endl;
     }
     else{
-        cout<<" ug is lighter"<<endl;
+        cout<<"dg is lighter"<<endl;
     }
     
-    cout<<ug2;
+    cout<<dg2;
+    cout<<endl;
     
- //   ug = (ug + ug2);
+    cout<<"Adding two graphs together..."<<endl;
+    dg3 = (dg + dg2);
     
-   // ug3.display();
+    dg3.display();
+   
+    cout<<endl;
+    cout<<"Adding graph by 1 twice..."<<endl;
     
-    ++ug;
+    ++dg;
     
-    ug++;
+    dg++;
     
-    ug.display();
+    dg.display();
     
-    ug = ug2;
+    cout<<endl;
+    cout<<"Assigning dg2 to dg..."<<endl;
+    dg = dg2;
     
-    ug.display();
+    dg.display();
     
-    ug.clean();
+    cout<<endl;
+    cout<<"Removing all the vertices and edges from graph..."<<endl;
+    dg.clean();
     
-    cout<<ug.searchEdge(E4);
-    cout<<ug.searchVertex(V5);
+    cout<<dg.searchEdge(E4);
+    cout<<dg.searchVertex(V5);
     
 
     cout<<endl;

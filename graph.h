@@ -47,7 +47,7 @@ public:
     void operator =(Graph&);  //assigns a graph to the other
     void operator ++();       //increases the weight by 1
     void operator ++(int);    //increases the weight by 1
-    
+
     bool operator >(Graph&);   //returns true if weight of edges in G1>G2
     friend ostream &operator<<( ostream& output, Graph& G);
     
